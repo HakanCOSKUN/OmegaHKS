@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OmegaHKS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OracleDbIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SAMSUNG</Value>
+    </Setting>
+    <Setting Name="OracleDbSID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OMEGA</Value>
+    </Setting>
+    <Setting Name="TempPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BAGLAN</Value>
+    </Setting>
+    <Setting Name="TempUserID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BAGLAN</Value>
+    </Setting>
+    <Setting Name="ApplicationSkinName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Visual Studio 2013 Blue</Value>
+    </Setting>
+    <Setting Name="TempPlakaNo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">06AC698</Value>
+    </Setting>
+    <Setting Name="GelenReferansID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">37166</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

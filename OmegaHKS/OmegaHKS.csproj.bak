@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3330D68-3F56-41B2-8A8A-63F1668749CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OmegaHKS</RootNamespace>
+    <AssemblyName>OmegaHKS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1445541684_Tomato.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>OmegaHKS.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FilterControls">
+      <HintPath>..\..\Trial-Serial-Maker\FilterControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Neodynamic.SDK.ThermalLabel, Version=6.0.3500.0, Culture=neutral, PublicKeyToken=0630b9b3415848af, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Neodynamic.SDK.ThermalLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.3\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ODP.NET_Managed_ODAC12cR4_64\odp.net\managed\common\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SerialBoxes">
+      <HintPath>..\..\Trial-Serial-Maker\SerialBoxes.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftwareLocker">
+      <HintPath>..\..\Trial-Serial-Maker\SoftwareLocker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BildirimController.cs" />
+    <Compile Include="Controllers\IrsaliyeController.cs" />
+    <Compile Include="Controllers\LocalDepoDTOController.cs" />
+    <Compile Include="Controllers\LocalHKSUpdateController.cs" />
+    <Compile Include="Controllers\OracleDb.cs" />
+    <Compile Include="Controllers\UrunControllers.cs" />
+    <Compile Include="Controllers\WebServiceTool.cs" />
+    <Compile Include="Core\StaticDegiskenler.cs" />
+    <Compile Include="Helpers\StaticReflection.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Helpers\FormHelper.cs" />
+    <Compile Include="Helpers\GenerelHelper.cs" />
+    <Compile Include="Helpers\MessageHelper.cs" />
+    <Compile Include="Models\AlisIrsaliye.cs" />
+    <Compile Include="Models\AnlikIslem.cs" />
+    <Compile Include="Models\AracPlaka.cs" />
+    <Compile Include="Models\BildirimListe.cs" />
+    <Compile Include="Models\BILDIRIMSONUC.cs" />
+    <Compile Include="Models\BildirimSorguDTOLocal.cs" />
+    <Compile Include="Models\BrimTip.cs" />
+    <Compile Include="Models\Cari.cs" />
+    <Compile Include="Models\DBIslemSonuc.cs" />
+    <Compile Include="Models\DepoSubeAramaTipi.cs" />
+    <Compile Include="Models\ErrorLog.cs" />
+    <Compile Include="Models\EtiketBelgeDepoListe.cs" />
+    <Compile Include="Models\EtiketBelgeListesi.cs" />
+    <Compile Include="Models\EtiketEkranListe.cs" />
+    <Compile Include="Models\HareketTip.cs" />
+    <Compile Include="Models\Hata.cs" />
+    <Compile Include="Models\Irsaliye.cs" />
+    <Compile Include="Models\IrsaliyeDetay.cs" />
+    <Compile Include="Models\IRSALIYEURUNDETAYI.cs" />
+    <Compile Include="Models\IslemSayac.cs" />
+    <Compile Include="Models\LocalBeldeDTO.cs" />
+    <Compile Include="Models\LocalBelgeTipiDTO.cs" />
+    <Compile Include="Models\LocalBildirimEtiketDTO.cs" />
+    <Compile Include="Models\LocalBildirimSorguDTO.cs" />
+    <Compile Include="Models\LocalBildirimTuruDTO.cs" />
+    <Compile Include="Models\LocalDepo.cs" />
+    <Compile Include="Models\LocalDepoDTO.cs" />
+    <Compile Include="Models\LocalIlceDTO.cs" />
+    <Compile Include="Models\LocalIsletmeTuruDTO.cs" />
+    <Compile Include="Models\LocalKunyeKayitBildirimSorguDTO.cs" />
+    <Compile Include="Models\LocalSifatDTO.cs" />
+    <Compile Include="Models\LocalSube.cs" />
+    <Compile Include="Models\LocalSubeBilgisi.cs" />
+    <Compile Include="Models\LocalSubeDepo.cs" />
+    <Compile Include="Models\LocalSubeDTO.cs" />
+    <Compile Include="Models\LocalUrunCinsiDTO.cs" />
+    <Compile Include="Models\LocalUrunDTO.cs" />
+    <Compile Include="Models\OmegaGENTM03.cs" />
+    <Compile Include="Models\ServiceUser.cs" />
+    <Compile Include="Models\SifatTanimlari.cs" />
+    <Compile Include="Models\STKTD023.cs" />
+    <Compile Include="Models\STKTH011.cs" />
+    <Compile Include="Models\Urun.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BildirimServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GenelServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UrunServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceConstants.cs" />
+    <Compile Include="Views\Aktarim\frmAlistanKunye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmAlistanKunye.Designer.cs">
+      <DependentUpon>frmAlistanKunye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmEtiketIstekleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmEtiketIstekleri.Designer.cs">
+      <DependentUpon>frmEtiketIstekleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmEtiketViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmEtiketViewer.Designer.cs">
+      <DependentUpon>frmEtiketViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyeAktarimlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyeAktarimlari.Designer.cs">
+      <DependentUpon>frmIrsaliyeAktarimlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyeDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyeDetay.Designer.cs">
+      <DependentUpon>frmIrsaliyeDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyesizBildirim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmIrsaliyesizBildirim.Designer.cs">
+      <DependentUpon>frmIrsaliyesizBildirim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmNihaiBildirimler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmNihaiBildirimler.Designer.cs">
+      <DependentUpon>frmNihaiBildirimler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmReferansBildirimler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Aktarim\frmReferansBildirimler.Designer.cs">
+      <DependentUpon>frmReferansBildirimler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ayarlar\frmAracTanimlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ayarlar\frmAracTanimlari.Designer.cs">
+      <DependentUpon>frmAracTanimlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ayarlar\FrmSifatBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ayarlar\FrmSifatBilgileri.Designer.cs">
+      <DependentUpon>FrmSifatBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ayarlar\frmWebServiceBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Ayarlar\frmWebServiceBilgileri.Designer.cs">
+      <DependentUpon>frmWebServiceBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmCariFirmaAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmCariFirmaAra.Designer.cs">
+      <DependentUpon>frmCariFirmaAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDepoEslestirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDepoEslestirme.Designer.cs">
+      <DependentUpon>frmDepoEslestirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDepoSubeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDepoSubeListesi.Designer.cs">
+      <DependentUpon>frmDepoSubeListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDMEslestirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmDMEslestirme.Designer.cs">
+      <DependentUpon>frmDMEslestirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmStokArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmStokArama.Designer.cs">
+      <DependentUpon>frmStokArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmSubeEslestirme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmSubeEslestirme.Designer.cs">
+      <DependentUpon>frmSubeEslestirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmUrunEslestirmeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Eslestirme\frmUrunEslestirmeleri.Designer.cs">
+      <DependentUpon>frmUrunEslestirmeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmBildirimYardimciBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmBildirimYardimciBilgileri.Designer.cs">
+      <DependentUpon>frmBildirimYardimciBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmEtiketSorgu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmEtiketSorgu.Designer.cs">
+      <DependentUpon>frmEtiketSorgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmLokasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmLokasyon.Designer.cs">
+      <DependentUpon>frmLokasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmUrunBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmUrunBilgileri.Designer.cs">
+      <DependentUpon>frmUrunBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmUrunYardimciBilgieri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LocalHKSUpdate\frmUrunYardimciBilgieri.Designer.cs">
+      <DependentUpon>frmUrunYardimciBilgieri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\frmHataListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\frmHataListele.Designer.cs">
+      <DependentUpon>frmHataListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\PrintJobDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\PrintJobDialog.Designer.cs">
+      <DependentUpon>PrintJobDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ucsBTNGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\ucsBTNGuncelle.Designer.cs">
+      <DependentUpon>ucsBTNGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\ucsBTNKayitIpal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\ucsBTNKayitIpal.Designer.cs">
+      <DependentUpon>ucsBTNKayitIpal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\uscImageViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControls\uscImageViewer.Designer.cs">
+      <DependentUpon>uscImageViewer.cs</DependentUpon>
+    </Compile>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OmegaHks.pfx" />
+    <None Include="OmegaHKS.snk" />
+    <None Include="Properties\DataSources\OmegaHKS.BildirimServiceReference.BelgeTipiDTO.datasource" />
+    <None Include="Properties\DataSources\OmegaHKS.BildirimServiceReference.BildirimSorguDTO.datasource" />
+    <None Include="Properties\DataSources\OmegaHKS.BildirimServiceReference.BildirimTuruDTO.datasource" />
+    <None Include="Properties\DataSources\OmegaHKS.GenelServiceReference.IsletmeTuruDTO.datasource" />
+    <None Include="Properties\DataSources\OmegaHKS.GenelServiceReference.SubeDTO.datasource" />
+    <None Include="Properties\DataSources\OmegaHKS.Models.BildirimSorguDTOLocal.datasource" />
+    <None Include="Resources\TOXML.png" />
+    <None Include="Resources\ImageFile.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\ThermalPrinterIcon32x32.png" />
+    <None Include="Resources\PDF.png" />
+    <EmbeddedResource Include="Views\Aktarim\frmAlistanKunye.resx">
+      <DependentUpon>frmAlistanKunye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmEtiketViewer.resx">
+      <DependentUpon>frmEtiketViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmIrsaliyesizBildirim.resx">
+      <DependentUpon>frmIrsaliyesizBildirim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ayarlar\FrmSifatBilgileri.resx">
+      <DependentUpon>FrmSifatBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmCariFirmaAra.resx">
+      <DependentUpon>frmCariFirmaAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmDMEslestirme.resx">
+      <DependentUpon>frmDMEslestirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalHKSUpdate\frmEtiketSorgu.resx">
+      <DependentUpon>frmEtiketSorgu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\PrintJobDialog.resx">
+      <DependentUpon>PrintJobDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\uscImageViewer.resx">
+      <DependentUpon>uscImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\prev.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\32_32_1445525269_application-pgp-signature.png" />
+    <None Include="Resources\24_1445814681_vector_65_01.png" />
+    <None Include="Resources\program_1_32.png" />
+    <None Include="Resources\program_1_16.png" />
+    <None Include="Resources\pcUser_1_32.png" />
+    <None Include="Resources\pcUser_1_16.png" />
+    <None Include="Resources\userArama_1_16.png" />
+    <None Include="Resources\pc_2_16.png" />
+    <None Include="Resources\pc_2_32.png" />
+    <None Include="Resources\1448176516_Error_32.png" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Aktarim\frmEtiketIstekleri.resx">
+      <DependentUpon>frmEtiketIstekleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmIrsaliyeAktarimlari.resx">
+      <DependentUpon>frmIrsaliyeAktarimlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmIrsaliyeDetay.resx">
+      <DependentUpon>frmIrsaliyeDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmNihaiBildirimler.resx">
+      <DependentUpon>frmNihaiBildirimler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Aktarim\frmReferansBildirimler.resx">
+      <DependentUpon>frmReferansBildirimler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ayarlar\frmAracTanimlari.resx">
+      <DependentUpon>frmAracTanimlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ayarlar\frmWebServiceBilgileri.resx">
+      <DependentUpon>frmWebServiceBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmDepoEslestirme.resx">
+      <DependentUpon>frmDepoEslestirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmDepoSubeListesi.resx">
+      <DependentUpon>frmDepoSubeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmStokArama.resx">
+      <DependentUpon>frmStokArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmSubeEslestirme.resx">
+      <DependentUpon>frmSubeEslestirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Eslestirme\frmUrunEslestirmeleri.resx">
+      <DependentUpon>frmUrunEslestirmeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalHKSUpdate\frmBildirimYardimciBilgileri.resx">
+      <DependentUpon>frmBildirimYardimciBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalHKSUpdate\frmLokasyon.resx">
+      <DependentUpon>frmLokasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalHKSUpdate\frmUrunBilgileri.resx">
+      <DependentUpon>frmUrunBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LocalHKSUpdate\frmUrunYardimciBilgieri.resx">
+      <DependentUpon>frmUrunYardimciBilgieri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\frmHataListele.resx">
+      <DependentUpon>frmHataListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\ucsBTNGuncelle.resx">
+      <DependentUpon>ucsBTNGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControls\ucsBTNKayitIpal.resx">
+      <DependentUpon>ucsBTNKayitIpal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\BildirimServiceReference\BildirimService.wsdl" />
+    <None Include="Service References\BildirimServiceReference\BildirimService1.wsdl" />
+    <None Include="Service References\GenelServiceReference\GenelService.wsdl" />
+    <None Include="Service References\GenelServiceReference\GenelService1.wsdl" />
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_BeldelerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_DepolarCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_HalIciIsyeriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_IlcelerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_IllerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_IsletmeTurleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_SubelerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\GenelServiceReference\OmegaHKS.GenelServiceReference.BaseResponseMessageOf_UlkelerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\OmegaHKS.UrunServiceReference.BaseResponseMessageOf_MalinNiteligiCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\OmegaHKS.UrunServiceReference.BaseResponseMessageOf_UretimSekilleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\OmegaHKS.UrunServiceReference.BaseResponseMessageOf_UrunBirimleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\OmegaHKS.UrunServiceReference.BaseResponseMessageOf_UrunCinsleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\OmegaHKS.UrunServiceReference.BaseResponseMessageOf_UrunlerCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UrunServiceReference\UrunService.wsdl" />
+    <None Include="Service References\UrunServiceReference\UrunService1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1445541684_Tomato.ico" />
+    <None Include="Resources\1448145316_diagram_v2-32.png" />
+    <None Include="Service References\GenelServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GenelServiceReference\configuration.svcinfo" />
+    <None Include="Service References\GenelServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\GenelServiceReference\GenelService.disco" />
+    <None Include="Service References\UrunServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UrunServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UrunServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UrunServiceReference\UrunService.disco" />
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_BelgeTipleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_BildirimEtiketCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_BildirimSorguCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_BildirimTurleriCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_KayitliKisiSorguCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_ListOf_BildirimKayitCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_ReferansKunyeCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_SifatCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\OmegaHKS.BildirimServiceReference.BaseResponseMessageOf_TopluKunyeCevap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BildirimServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BildirimServiceReference\configuration.svcinfo" />
+    <None Include="Service References\BildirimServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\BildirimServiceReference\BildirimService.disco" />
+    <None Include="Resources\48_48_1445525494_Department.png" />
+    <None Include="Resources\palet02_63.png" />
+    <None Include="Resources\1445541680_Tomato.png" />
+    <None Include="Resources\1444400094_map.png" />
+    <None Include="Resources\1447276817_notification_done_32.png" />
+    <None Include="Resources\32_1445813876_todo_list.png" />
+    <None Include="Resources\1444400131_internet_earth_48.png" />
+    <None Include="Resources\Sevkiyat_48.png" />
+    <None Include="Resources\1447277981_license.png" />
+    <None Include="Resources\1447277082_file_search_32.png" />
+    <None Include="Resources\1447276800_folder_search_32.png" />
+    <None Include="Resources\1447276761_load_upload_32.png" />
+    <None Include="Resources\1447276725_load_download_32.png" />
+    <None Include="Resources\1447276587_joomla_32.png" />
+    <None Include="Resources\1447276842_document_search_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BildirimServiceReference\" />
+    <WCFMetadataStorage Include="Service References\GenelServiceReference\" />
+    <WCFMetadataStorage Include="Service References\UrunServiceReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
